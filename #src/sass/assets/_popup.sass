@@ -1,0 +1,431 @@
+#thx, .thx, #thx-pay, #thx-vol
+  display: none
+  z-index: 5000
+  background-color: #fff
+  border-radius: 25px
+  padding: 30px
+  flex-direction: column
+  align-items: center
+  box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.1)
+  max-width: 1000px
+  width: 100%
+  max-height: 100%
+  img
+    margin: auto
+    margin-bottom: 20px
+    display: block 
+  b
+    display: block
+    color: $main
+    font-size: 36px
+    margin-top: 30px
+    text-align: center
+  p
+    color: $text
+    display: block
+    margin-bottom: 20px
+    text-align: center
+  .button
+    width: 100%
+    max-width: 100%
+    box-shadow: none
+
+.wpcf7-response-output
+  display: none!important
+
+.overlay
+  position: fixed
+  z-index: 100
+  top: 0
+  width: 100%
+  left: 0
+  right: 0
+  bottom: 0
+  height: 100%
+  background-color: rgba(#000, .7)
+  display: none
+
+.popup
+  width: 435px
+  max-width: 95vw
+  max-height: 95vh
+  background-color: #fff
+  padding: 30px
+  border-radius: 5px
+  z-index: 150
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  color: $dark
+  &-thx
+    opacity: .3
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"]
+    appearance: none
+    border-radius: 15px
+    background-color: #fff
+    border: 1px solid #E7E7E7
+    height: 60px
+    width: 100%
+    max-width: 100%
+    display: block
+    font-size: 18px
+    padding-left: 20px
+  textarea
+    resize: none
+    appearance: none
+    border-radius: 15px
+    background-color: #fff
+    border: 1px solid #E7E7E7
+    height: 210px
+    width: 100%
+    max-width: 100%
+    display: block
+    font-size: 18px
+    padding-left: 20px
+    padding-top: 25px
+  input.button
+    box-shadow: none
+    width: 100%
+    max-width: 100%
+    display: block
+    margin-bottom: 20px
+    margin-top: 20px
+  small
+    color: #9A9A9A
+    font-size: 14px
+    max-width: 240px
+    display: block
+    line-height: 17px
+    a
+      color: #9A9A9A
+      font-size: 14px
+      line-height: 17px
+      text-decoration: underline
+      &:hover
+        color: $accent
+  .close
+    position: absolute
+    cursor: pointer
+    transition: .2s
+    top: 25px
+    right: 25px
+    height: 32px
+    z-index: 10
+    width: 32px
+    svg
+      width: 32px
+      height: 32px
+      display: block
+    &:hover
+      transition: .2s
+      path
+        fill: $main
+  .form-radio .wpcf7-form-control
+    background-color: #F9F9FA
+    border-radius: 15px
+    width: max-content
+    padding: 5px
+    display: block
+    margin-bottom: 20px
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    .wpcf7-list-item
+      margin: 0
+      &:first-child
+        margin-right: 5px
+      span
+        font-size: 18px
+        line-height: 22px
+        color: #9A9A9A
+        display: block
+        padding: 10px 30px
+        border-radius: 10px
+        cursor: pointer
+        transition: .2s
+        &:hover
+          background-color: #fff
+          color: $dark
+          transition: .2s
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+      input
+        display: none
+        &:checked + span
+          background-color: #fff
+          color: $dark
+          box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.05)
+  &.popup-video
+    width: 920px
+    max-width: 95vw
+    .close
+      top: 5px
+      right: 5px
+    iframe
+      border-radius: 5px
+      max-width: 100%
+      width: 100%
+      height: 100%
+      aspect-ratio: 16/9
+
+.pay-popup
+  display: none
+  position: fixed
+  top: 50%
+  left: 50%
+  transform: translate(-50%, -50%)
+  background-color: #fff
+  .close
+    top: 10px
+    right: 10px
+  b
+    font-size: 24px
+    display: block
+    text-align: center
+    font-family: $font_title
+    margin-bottom: 10px
+    font-weight: 700
+  .summ
+    display: flex
+    justify-content: center
+    align-items: center
+    text-transform: uppercase
+    font-size: 30px
+    font-family: $font
+    color: $dark
+    margin-bottom: 20px
+    span
+      display: flex
+      margin-right: 5px
+      font-size: 30px
+
+.pay-form
+  display: none
+  width: 100%
+  max-width: 1390px
+  padding: 0px
+  height: 850px
+  padding-right: 10px
+  .wrap
+    background-color: #fff
+    overflow-y: auto
+    height: 100%
+    width: 100%
+    max-height: 100%
+    display: block
+    padding: 30px
+    padding-right: 20px
+    position: relative
+    &::-webkit-scrollbar
+      width: 10px
+      height: 100%
+      background-color: transparent
+      border-radius: 5x
+      border: 1px solid $title_text
+      position: relative
+    &::-webkit-scrollbar-thumb 
+      background-color: $main
+      border-radius: 5px
+      height: 40px
+    &::-webkit-scrollbar-button:vertical:start:decrement
+      background-color: #000
+    &::-webkit-scrollbar-button:vertical:end:increment
+      background-color: red
+  b
+    font-size: 40px
+    display: block
+    font-family: $font_title
+    margin-bottom: 30px
+    color: #8A8A8A
+  .row
+    display: flex
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 30px
+  .item
+    display: flex
+    justify-content: center
+    align-items: center
+    height: 60px
+    width: calc(25% - (150px / 4))
+    background-color: #fff
+    transition: .2s
+    color: #8A8A8A
+    font-size: 24px
+    font-weight: 600
+    border: 2px solid #8A8A8A
+    border-radius: 10px
+    cursor: pointer
+    &:hover
+      transition: .2s
+      color: $dark
+      background-color: #FDE3C4
+      border-color: $main
+    span
+      padding-right: 5px
+    &.active
+      color: #1F3040
+      border-color: $main
+      background-color: #FDE3C4
+  .input
+    input
+      border-radius: 10px
+      border: 1px solid #8A8A8A
+      display: flex
+      justify-content: center
+      align-items: center
+      color: $dark
+      font-size: 24px
+      &:placeholder
+        font-size: 24px
+        color: #8A8A8A
+    &-hidden
+      margin-bottom: 30px
+      transition: .2s
+      display: none
+  .pay-form-toggle
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 30px
+    .button
+      width: 50%
+      max-width: 100%
+      margin: 0
+      height: 60px
+      background-color: #fff
+      border: 2px solid $main
+      color: #8A8A8A
+      font-size: 26px
+      border-radius: 10px 0 0 10px
+      &:last-child
+        border-radius: 0 10px 10px 0
+      &:hover
+        background-color: $main
+        color: #fff
+        transition: .2s
+      &.active
+        background-color: $main
+        color: #fff
+  .input-wrapper
+    display: block
+    margin-bottom: 50px
+    input
+      margin-bottom: 20px
+      &:last-child
+        margin-bottom: 0
+  .go-pay
+    margin: auto
+    height: 65px
+    font-size: 28px
+    width: 100%
+    max-width: 530px
+    margin-bottom: 25px
+    border-radius: 10px
+  small
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    max-width: max-content
+    margin: auto
+    label
+      cursor: pointer
+      font-size: 20px
+      color: #C2C2C2
+      line-height: 1.4
+      position: relative
+      padding-left: 50px
+      transition: .2s
+      &:hover
+        transition: .2s
+        color: $main
+      &::after
+        position: absolute
+        content: ''
+        height: 32px
+        width: 32px
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        background-repeat: no-repeat
+        background-size: contain
+        background-image: url(../img/icons/uncheck.svg)
+    input:checked + label
+      &::after
+        background-image: url(../img/icons/check.svg)
+
+
+@media (max-width: 992px)
+  .pay-form
+    width: 100%
+    max-width: calc(100vw - 30px)
+    max-height: calc(95vh - 60px)
+    .wrap
+      position: relative
+    .close
+      top: 28px
+      right: 20px
+    .go-pay
+      margin-bottom: 20px
+      height: 60px
+      font-size: 20px
+    small
+      label
+        font-size: 16px
+        padding-left: 30px
+        &:after
+          height: 20px
+          width: 20px
+    .input
+      &-wrapper
+        margin-bottom: 30px
+      
+      input
+        height: 45px
+        font-size: 18px
+        &:placeholder
+          font-size: 18px
+    .row
+      margin-bottom: 20px
+    .item
+      width: calc(25% - 10px)
+      font-size: 16px
+      height: 40px
+    .pay-form-toggle
+      margin-bottom: 20px
+      .button
+        font-size: 18px
+        height: 40px
+    b
+      font-size: 24px
+      margin-bottom: 20px
+
+@media (max-width: 767px)
+  .pay-form
+    padding-right: 0px
+    .wrap 
+      padding-left: 20px
+      padding-right: 20px
+    b
+      font-size: 22px
+    .item
+      width: calc(50% - 5px)
+      margin-bottom: 10px
+    .row
+      margin-bottom: 10px
+      flex-wrap: wrap
+    .pay-form-toggle
+      display: block
+      margin-bottom: 20px
+      .button
+        width: 100%
+        max-width: 100%
+        border-radius: 5px!important
+        margin-bottom: 10px
+  #thx b, .thx b, #thx-pay b, #thx-vol b
+    font-size: 20px  

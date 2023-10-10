@@ -1,0 +1,14 @@
+@mixin font($font_name, $file_name, $weight, $style) 
+  @font-face 
+    font-family: $font_name
+    font-display: swap
+    src: url("../fonts/#{$file_name}.woff2") format("woff2"), url("../fonts/#{$file_name}'.woff") format("woff")
+    font-weight: $weight
+    font-style: $style
+  
+@include font("Manrope", "Manrope-Regular", 400, "normal")
+@include font("Manrope", "Manrope-Light", 300, "normal")
+@include font("Alegreya", "Alegreya-Regular", 400, "normal")
+@include font("Alegreya", "Alegreya-Italic", 400, "italic")
+@include font("Alegreya", "Alegreya-Medium", 500, "normal")
+

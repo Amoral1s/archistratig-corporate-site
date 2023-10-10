@@ -1,0 +1,253 @@
+@import "./reset/_vars"
+
+.comment-respond
+  margin-top: 80px
+  h3
+    font-size: 30px
+    font-family: $font
+    display: block
+    margin-bottom: 40px
+    font-weight: 500
+  #commentform
+    display: flex
+    align-items: stretch
+    flex-wrap: wrap
+    position: relative
+    
+    .comment-form-author,
+    .comment-form-email,
+    .comment-form-comment
+      position: relative
+      margin-right: 15px
+      margin-bottom: 15px
+      max-width: 280px
+      label
+        position: absolute
+        z-index: 1
+        left: 20px
+        top: 8px
+        color: #9A9A9A
+        font-size: 14px
+      input, textarea
+        appearance: none
+        border-radius: 5px
+        background-color: transparent
+        border: 1px solid #676767
+        height: 60px
+        width: 100%
+        max-width: 280px
+        display: block
+        font-size: 18px
+        padding-left: 20px
+        padding-top: 25px
+        color: #fff
+      textarea
+        height: 175px
+        min-height: 175px
+    .comment-form-comment
+      margin-top: 80px
+      max-width: 100%
+      width: 900px
+      textarea
+        width: 100%
+        max-width: 100%
+    .comment-form-author
+      position: absolute
+      left: 0
+      top: 0
+    .comment-form-email
+      position: absolute
+      left: 300px
+      top: 0
+    .comment-notes,
+    .comment-form-url,
+    .comment-form-cookies-consent
+      display: none 
+    .form-submit
+      position: absolute
+      left: 0
+      top: 280px
+      input
+        display: flex
+        justify-content: center
+        align-items: center
+        background-color: $accent
+        color: #fff
+        border-radius: 5px
+        width: 190px
+        height: 60px
+        font-weight: 400
+        font-size: 18px
+        transition: .2s
+        &:hover
+          transition: .2s
+          transform: scale(1.1)
+
+.comments-rating 
+  border: none
+  padding: 0
+  margin-left: 0
+ 
+.comments-rating label 
+  display: inline-block
+ 
+.rating-container 
+  font-size: 0
+  unicode-bidi: bidi-override
+  direction: rtl
+ 
+.rating-container * 
+  font-size: 1.4rem
+
+.rating-container > input 
+  display: none
+
+.rating-container > input + label 
+  font-family: 'dashicons'
+  display: inline-block
+  overflow: hidden
+  text-indent: 9999px
+  width: 1em
+  white-space: nowrap
+  cursor: pointer
+  margin: 0
+ 
+.rating-container > input + label:before 
+  display: inline-block
+  text-indent: -9999px
+  content: "\f154"
+  color: #888
+ 
+.rating-container > input:checked ~ label:before,
+.rating-container > input + label:hover ~ label:before,
+.rating-container > input + label:hover:before 
+  content: "\f155"
+  color: #e52
+  text-shadow: 0 0 1px #333
+ 
+.rating-container > .star-cb-clear + label 
+  text-indent: -9999px
+  width: .5em
+  margin-left: -.5em
+ 
+.rating-container > .star-cb-clear + label:before 
+  width: .5em
+
+.rating-container:hover > input + label:before 
+  content: "\f154"
+  color: #888
+  text-shadow: none
+ 
+.rating-container:hover > input + label:hover ~ label:before,
+.rating-container:hover > input + label:hover:before 
+  content: "\f155"
+  color: #e52
+  text-shadow: 0 0 1px #333
+
+.comments-area
+  .edit-link
+    display: none
+  .comment-content
+    p
+      font-size: 16px
+      line-height: 1.5
+      display: block
+      margin-bottom: 15px
+      &:last-child
+        margin-bottom: 0
+        position: absolute
+        top: 30px
+        right: 30px
+        .dashicons
+          &::before
+            color: $accent
+  ol
+    list-style-type: none
+    li
+      padding: 30px
+      background: rgba(103, 103, 103, 0.3)
+      border-radius: 10px
+      margin-bottom: 20px
+      position: relative
+  .comments-title
+    margin-bottom: 40px
+    text-align: left
+    margin-top: 80px
+  .comment-meta
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    margin-bottom: 10px
+  .comment-metadata
+    a
+      time
+        font-size: 16px
+        color: $text
+        display: block
+        margin-left: 20px
+  .comment-author
+    b
+      font-size: 18px
+      display: block
+      margin-bottom: 5px
+    img
+      display: none
+    span
+      display: none
+
+#commentform
+  padding-bottom: 60px
+  label[for="rating"]
+    display: none
+  .comments-rating
+    position: absolute
+    left: 600px
+    top: 15px
+  .logged-in-as
+    display: none
+
+.not-found
+  padding-bottom: 200px
+  padding-top: 260px
+  .button
+    margin: auto
+  h1
+    color: $accent
+    font-size: 100px
+    display: block
+    margin-bottom: 40px
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./_popup"
+
+
+
+
+
+

@@ -1,0 +1,244 @@
+@import "./reset/_vars"
+
+.button
+  display: flex
+  align-items: center
+  justify-content: center
+  transition: .2s
+  background-color: $main
+  color: #fff
+  font-size: 18px
+  font-weight: 400
+  cursor: pointer
+  width: 100%
+  max-width: 224px
+  height: 43px
+  &:hover
+    transition: .2s
+    &:hover
+      transition: .2s
+      color: $dark
+      background-color: #FEDFBB
+      
+.title
+  font-weight: 400
+  color: #1F3040
+  display: block
+  font-size: 44px
+  text-transform: uppercase
+ 
+
+.subtitle
+  font-size: 18px
+  line-height: 1.5
+  display: block
+  color: $dark
+
+.content
+  a
+    color: $main
+    transition: .2s
+    font-size: 30px
+    &:hover
+      text-decoration: underline
+      transition: .2s
+  .wp-block-image
+    width: 100%
+    display: block
+    margin-bottom: 40px
+    .wp-element-caption
+      width: 100%
+      text-align: end
+      font-size: 16px
+      color: $text
+    img
+      width: 100%
+      object-fit: contain
+      border-radius: 15px
+      display: block
+  iframe
+    width: 100%
+    height: auto
+    object-fit: contain
+    aspect-ratio: 16 / 9
+    border-radius: 15px
+  .wp-block-table
+    margin-bottom: 40px
+    margin-top: 40px
+    table
+      tbody
+        tr
+          td
+            color: $dark
+            font-weight: 400
+            text-align: left
+            border-left: none
+            border-right: none
+            padding: 20px 0
+      thead
+        tr
+          th
+            color: $text
+            font-weight: 400
+            text-align: left
+            border-left: none
+            border-right: none
+            padding: 20px 0
+  h2,h3,h4,h5,h6
+    display: block
+    margin-bottom: 20px
+    margin-top: 40px
+    text-transform: uppercase
+  h2
+    font-size: 40px
+  h3
+    font-size: 36px
+  h4
+    font-size: 32px
+  h5
+    font-size: 28px
+  h6
+    font-size: 24px
+  p
+    color: $dark
+    font-weight: 400
+    line-height: 1.5
+    display: block
+    margin-bottom: 40px 
+    font-size: 30px
+    strong
+      color: $main
+  ul, ol
+    display: block
+    margin-bottom: 30px
+    li
+      margin-bottom: 30px
+      position: relative
+      padding-left: 15px
+      color: $dark
+      font-size: 30px
+      strong
+        color: $dark
+      &::after
+        position: absolute
+        content: ''
+        height: 6px
+        width: 6px
+        border-radius: 100%
+        left: 0
+        top: 50%
+        transform: translateY(-50%)
+        background-color: $accent
+  ol
+    margin-left: 20px
+    li
+      padding-left: 0
+      &::after
+        display: none
+.hidden
+  display: none!important
+
+.wp-pagenavi
+  display: flex
+  margin-top: 60px
+  justify-content: center
+  align-items: center
+  span.current
+    color: $accent
+    border-radius: 5px
+    border: 1px solid $accent
+    border-color: $accent
+    width: 48px
+    height: 48px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 5px 
+  a
+    color: $dark
+    border-radius: 5px
+    border: 1px solid $dark
+    border-color: $dark
+    width: 48px
+    height: 48px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin: 0 5px
+    transition: .2s
+    &:hover
+      transition: .2s
+      color: $accent
+      border-color: $main
+  .pages
+    display: none
+
+.not-found
+  padding-bottom: 200px
+  padding-top: 260px
+  .button
+    margin: auto
+  h1
+    color: $accent
+    font-size: 100px
+    display: block
+    margin-bottom: 40px
+
+@media (max-width: 992px)
+  .content
+    ul li,
+    ol li,
+    p,
+    p strong,
+    a
+      font-size: 18px
+    h2
+      font-size: 30px
+    h3
+      font-size: 28px
+    h4
+      font-size: 26px
+    h5
+      font-size: 24px
+    h6
+      font-size: 22px
+    p
+      margin-bottom: 20px
+    ol, ul
+      margin-bottom: 15px
+      li
+        margin-bottom: 15px
+    ol
+      margin-left: 0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@import "./assets/_popup"
+
+
+
+
+
+
