@@ -58,11 +58,11 @@
           </svg>
         </div>
         <h2 class="title">
-          ПРОЕКТЫ В РАБОТЕ
+          Храмы в работе
         </h2>
       </div>
       <a href="<?php the_permalink(24) ?>" class="all-link">
-        <p>Смотреть все проекты</p>
+        <p>Смотреть все храмы</p>
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
           <path d="M45 24.9999L46.18 26.1799L47.3567 24.9999L46.18 23.8199L45 24.9999ZM43.82 23.8199L30.4867 37.1532L32.8467 39.5132L46.18 26.1799L43.82 23.8199ZM46.18 23.8199L32.8467 10.4866L30.4867 12.8466L43.82 26.1799L46.18 23.8199ZM45 23.3332L3.33333 23.3332V26.6666L45 26.6666V23.3332Z" fill="#7289A0"/>
         </svg>
@@ -78,7 +78,8 @@
         <div class="projects-wrap-item swiper-slide">
           <img src="<?php the_post_thumbnail_url('large') ?>" alt="thumb">
           <div class="projects-wrap-item-title">
-            <h3><?php the_title(); ?></h3>
+			  <a href="<?php the_permalink(); ?>"><h3><?php the_title() ?></h3></a>
+            
             <span><?php the_field('mestopolozhenie_hrama') ?>, </span>
             <span><?php the_field('osnovanie_hrama') ?></span>
           </div>
@@ -100,7 +101,7 @@
           </div>
           <?php } ?>
           <div class="projects-wrap-item-btns">
-            <a href="<?php the_permalink(  ) ?>">
+            <a href="<?php the_permalink() ?>">
               Подробнее
             </a>
             <div class="button donate">
@@ -140,7 +141,7 @@
         <div class="news-wrap-items news-slider  swiper">
           <div class="swiper-wrapper news-wrap-items ">
             <?php
-              $my_posts = get_posts('numberposts=3&post_type=post');
+              $my_posts = get_posts('numberposts=3&post_type=post&category__not_in=3');
               foreach ($my_posts as $post) :
               setup_postdata($post);
             ?>

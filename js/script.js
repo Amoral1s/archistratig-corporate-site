@@ -30,51 +30,18 @@ jQuery(document).ready(function ($) {
 	
   //cf7
   jQuery(".wpcf7").on('wpcf7mailsent', function(event){
-	  console.log(event.detail.contactFormId)
-	  if (event.detail.contactFormId == '77') {
-		  jQuery('#thx-vol').fadeIn(200);
+    //alert('GOOD');
+    jQuery('#thx').fadeIn(200);
 		$('.popup').addClass('popup-thx');
-		$('#thx-vol').removeClass('popup-thx');
-		//Скрытие поп окна автоматически, через 5,5 секнд
-		jQuery('.overlay').fadeIn(300);
+		$('#thx').removeClass('popup-thx');
+    //Скрытие поп окна автоматически, через 5,5 секнд
+    jQuery('.overlay').fadeIn(300);
 
-		setTimeout(function(){
-		  jQuery('.overlay').fadeOut(300);
-		  jQuery('.popup').fadeOut(300);
-		  jQuery('#thx-vol').fadeOut(200);
-		},2500);   //3500 = 3,5 секунды
-	  } else if (event.detail.contactFormId == '158') {
-		   jQuery('#thx-sub').fadeIn(200);
-		$('.popup').addClass('popup-thx');
-		$('#thx-sub').removeClass('popup-thx');
-		//Скрытие поп окна автоматически, через 5,5 секнд
-		jQuery('.overlay').fadeIn(300);
-
-		setTimeout(function(){
-		  jQuery('.overlay').fadeOut(300);
-		  jQuery('.popup').fadeOut(300);
-		  jQuery('#thx-sub').fadeOut(200);
-		},2500);   //3500 = 3,5 секунды
-		  
-	  } else {
-		  
-		  if (event.detail.contactFormId != '191') {
-			    //alert('GOOD');
-				jQuery('#thx').fadeIn(200);
-					$('.popup').addClass('popup-thx');
-					$('#thx').removeClass('popup-thx');
-				//Скрытие поп окна автоматически, через 5,5 секнд
-				jQuery('.overlay').fadeIn(300);
-
-				setTimeout(function(){
-				  jQuery('.overlay').fadeOut(300);
-				  jQuery('.popup').fadeOut(300);
-				  jQuery('#thx').fadeOut(200);
-				},2500);   //3500 = 3,5 секунды
-		  }
-		
-	  }
-    
+    setTimeout(function(){
+      jQuery('.overlay').fadeOut(300);
+      jQuery('.popup').fadeOut(300);
+      jQuery('#thx').fadeOut(200);
+    },2500);   //3500 = 3,5 секунды
     
     /* setTimeout(function(){jQuery('.popup').fadeOut(300);},2700); 
     setTimeout(function(){jQuery('#calc').fadeOut(300);},2700);  */

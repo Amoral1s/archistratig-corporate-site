@@ -310,7 +310,8 @@ section {
           justify-content: center;
 }
 
-.header-phones a {
+.header-phones a,
+.header-phones .phone {
   font-size: 20px;
   font-weight: 300;
   margin-bottom: 15px;
@@ -325,7 +326,8 @@ section {
           align-items: center;
 }
 
-.header-phones a svg {
+.header-phones a svg,
+.header-phones .phone svg {
   display: block;
   margin-right: 10px;
   width: 24px;
@@ -635,7 +637,8 @@ a:hover {
             justify-content: flex-start;
   }
 
-  .header .menu-wrap .phones a {
+  .header .menu-wrap .phones a,
+  .header .menu-wrap .phones .phone {
     font-size: 16px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -650,7 +653,8 @@ a:hover {
     margin-bottom: 20px;
   }
 
-  .header .menu-wrap .phones a svg {
+  .header .menu-wrap .phones a svg,
+  .header .menu-wrap .phones .phone svg {
     margin-left: 10px;
     display: block;
   }

@@ -87,19 +87,18 @@ function my_styles() {
 		//wp_enqueue_style( 'header', get_template_directory_uri() . '/css/header.min.css' );
 		wp_enqueue_style( 'swipercss', get_template_directory_uri() . '/css/swiper.min.css' );
 		wp_enqueue_style( 'magcss', get_template_directory_uri() . '/css/magnific-popup.min.css' );
-		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main.css' );
+		wp_enqueue_style( 'main', get_template_directory_uri() . '/css/main_upd.min.css' );
 		wp_enqueue_style( 'stylecss', get_stylesheet_uri() ); 
 }
 
 add_action( 'wp_footer', 'my_scripts' );
 function my_scripts() {
 	wp_deregister_script( 'jquery-core' );
-	wp_register_script( 'jquery-core', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js');
-	//wp_register_script( 'scripts', get_template_directory_uri() . '/js/jquery-3.2.1.js', array('jquery'), null, true );
+	//wp_register_script( 'jquery-core', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js');
+	wp_register_script( 'scripts', get_template_directory_uri() . '/js/jquery-3.2.1.js', array('jquery'), null, true );
 	wp_enqueue_script( 'jquery' );
 	wp_enqueue_script( 'swiper', get_template_directory_uri() . '/js/swiper.min.js', array('jquery'), null, true );
 	wp_enqueue_script( 'magnific', get_template_directory_uri() . '/js/jquery.magnific-popup.min.js', array('jquery'), null, true );
-	//wp_enqueue_script( 'cloud1', 'https://widget.cloudpayments.ru/bundles/paymentblocks.js');
 	wp_enqueue_script( 'cloud', 'https://widget.cloudpayments.ru/bundles/cloudpayments.js');
 	wp_enqueue_script( 'script', get_template_directory_uri() . '/js/script.js', array('jquery'), null, true );
 	wp_enqueue_script( 'pay', get_template_directory_uri() . '/js/payment.js', array('jquery'), null, true );

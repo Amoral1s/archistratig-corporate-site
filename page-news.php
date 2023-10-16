@@ -14,7 +14,8 @@ get_header();
       $args = array(
         'posts_per_page' => get_option('posts_per_page'), // значение по умолчанию берётся из настроек, но вы можете использовать и собственное
         'paged'          => $current_page, // текущая страница
-        'post_type'      => 'post'
+        'post_type'      => 'post',
+		'category__not_in' => 3
       );
       query_posts( $args );
       

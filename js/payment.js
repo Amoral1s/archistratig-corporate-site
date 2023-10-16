@@ -41,16 +41,6 @@ document.addEventListener('DOMContentLoaded', () => {
    })
   });
 
-  const hiddenForm = (name, email, amount, phone, setToggles) => {
-    jQuery('.hidden-form-pay input.name').val(name)
-    jQuery('.hidden-form-pay input.email').val(email)
-    jQuery('.hidden-form-pay input.summ').val(amount)
-    jQuery('.hidden-form-pay input.phone').val(phone)
-    jQuery('.hidden-form-pay input.plat').val(setToggles)
-    jQuery('.button-payes').trigger('click');
-  }
-
-
   const singlePayment = (amount, email, name, phone) => {
     var payments = new cp.CloudPayments();
 
@@ -72,10 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
           onSuccess: function (options) { // success
-            let text = 'Одиночный платеж';
-
-            hiddenForm(name, email, amount, phone, text);
-           jQuery('#thx-pay').fadeIn(200);
+            jQuery('#thx-pay').fadeIn(200);
             $('.popup').addClass('popup-thx');
             $('#thx-pay').removeClass('popup-thx');
             //Скрытие поп окна автоматически, через 5,5 секнд
@@ -88,15 +75,13 @@ document.addEventListener('DOMContentLoaded', () => {
             },2500);   //3500 = 3,5 секунды
           },
           onFail: function (reason, options) { // fail
-              alert('Ошибка! Платеж не прошел!');
-              
+              alert('Ошибка! Платеж не прошел!')
           }
       }
       ).then((result) => {
         // Объект типа WidgetResult
         console.log('result', result);
     });
-    
   }
 
   const subscribePayment = (amount, email, name, phone) => {
@@ -164,18 +149,16 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
           onSuccess: function (options) { // success
-            let text = 'Ежемесячный платеж платеж';
-            hiddenForm(name, email, amount, phone, text);
-            jQuery('#thx-pay').fadeIn(200);
+            jQuery('#thx').fadeIn(200);
             $('.popup').addClass('popup-thx');
-            $('#thx-pay').removeClass('popup-thx');
+            $('#thx').removeClass('popup-thx');
             //Скрытие поп окна автоматически, через 5,5 секнд
             jQuery('.overlay').fadeIn(300);
         
             setTimeout(function(){
               jQuery('.overlay').fadeOut(300);
               jQuery('.popup').fadeOut(300);
-              jQuery('#thx-pay').fadeOut(200);
+              jQuery('#thx').fadeOut(200);
             },2500);   //3500 = 3,5 секунды
           },
           onFail: function (reason, options) { // fail
@@ -186,9 +169,7 @@ document.addEventListener('DOMContentLoaded', () => {
         // Объект типа WidgetResult
         console.log('result', result);
     });
-    
   }
-  
 
   const formSubmit = () => {
     let amount = +summInput.value,
@@ -207,6 +188,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (setToggles === 2) {
       subscribePayment(amount, email, name, phone);
     }
+    
   }
 
   const submitBtn = document.querySelector('.go-pay');
@@ -216,6 +198,5 @@ document.addEventListener('DOMContentLoaded', () => {
     formSubmit();
   });
 
- 
 
 })

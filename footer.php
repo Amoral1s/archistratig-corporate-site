@@ -84,6 +84,8 @@
             <li><a href="mailto:<?php the_field('pochta', 'options'); ?>"><?php the_field('pochta', 'options'); ?></a></li>
           </ul>
 			<a class="subs title" href="<?php the_permalink(156); ?>">Подписка</a>
+			<a class="subs title" href="<?php the_permalink(313); ?>">Пожертвование</a>
+			<a class="subs title" href="<?php the_permalink(315); ?>">Анкета участника</a>
         </div>
       </div>
     </div>
@@ -195,219 +197,16 @@
     </small>
   </div>
 </div>
-<style>
-	.pay-form small label a{
-		font-size: 20px;
-		color: #c2c2c2;
-	}
-	.pay-form small label:hover {
-		color: #c2c2c2
-	}
-	.phone.contacts-wrap-item div {
-		font-size: 40px;
-    font-weight: 400;
-    color: #1f3040;
-		display: block;
-		margin: auto;
-		text-align: center;
-	}
-	@media (max-width: 992px) {
-		.contacts .adress {
-			position: relative;
-		}
-		.contacts .adress .icon {
-			position: absolute;
-			left: -40px;
-			top: 0px;
-		}
-		.contacts .adress p {
-			text-align: center;
-		}
-	}
-	@media (max-width: 767px) {
-		.phone.contacts-wrap-item div {
-			font-size: 22px;
-		}
-		.contacts .adress .icon {
-    position: absolute;
-    left: -10px;
-    top: -5px;
-}
-		.contacts .adress .icon svg {
-			height: 24px;
-			width: 24px;
-		}
-	}
-	@media (max-width: 578px) {
-		.contacts .adress .icon {
-    position: absolute;
-    left: -7px;
-    top: -0px;
-}
-		.contacts .adress .icon svg {
-			height: 24px;
-			width: 24px;
-		}
-		.contacts .adress p {
-			padding-left: 10px;
-		}
-	}
-	@media (max-width: 1420px) {
-		
-		.footer-wrap .req {
-			max-width: 310px;
-		}
-		 .pay-form {
-			 height: 670px;
-    width: 100%;
-		width: 970px;
-    max-width: calc(100vw - 30px);
-    max-height: calc(100vh - 30px);
-  }
 
-  .pay-form .wrap {
-    position: relative;
-  }
 
-  .pay-form .close {
-    top: 28px;
-    right: 20px;
-  }
 
-  .pay-form .go-pay {
-    margin-bottom: 20px;
-    height: 60px;
-    font-size: 20px;
-  }
 
-  .pay-form small label {
-    font-size: 16px;
-    padding-left: 30px;
-  }
-
-  .pay-form small label:after {
-    height: 20px;
-    width: 20px;
-  }
-
-  .pay-form .input-wrapper {
-    margin-bottom: 30px;
-  }
-
-  .pay-form .input input {
-    height: 45px;
-    font-size: 18px;
-  }
-
-  .pay-form .input input:placeholder {
-    font-size: 18px;
-  }
-
-  .pay-form .row {
-    margin-bottom: 20px;
-  }
-
-  .pay-form .item {
-    width: calc(25% - 10px);
-    font-size: 16px;
-    height: 40px;
-	  margin-right: 10px;
-  }
-
-  .pay-form .pay-form-toggle {
-    margin-bottom: 20px;
-  }
-
-  .pay-form .pay-form-toggle .button {
-    font-size: 18px;
-    height: 40px;
-  }
-
-  .pay-form b {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-		
-	}
-	@media (min-width: 992px) and (max-width: 1420px) {
-		.footer-wrap-right {
-			width: calc(100% - 450px);
-		}
-	}
-	@media (max-width: 992px) {
-		.pay-form small label a{
-		font-size: 16px;
-		
-	}
-		.offer::after {
-			width: 300px;
-			height: 700px;
-		}
-	}
-	.pay-form .row {
-		justify-content: flex-start;
-		
-	}
-	.pay-form .item {
-		width: calc(25% - 20px);
-		margin-right: 20px;
-		margin-bottom: 20px;
-	}
-	@media (max-width: 767px) {
-		.pay-form .item {
-			width: calc(50% - 10px);
-			margin-bottom: 10px;
-			margin-right: 10px;
-		}
-	}
-	@media (max-width: 578px) {
-		.footer-wrap-item .subs {
-			display: block!important;
-			font-size: 22px;
-			font-weight: 500;
-			margin-top: 40px;
-		}
-		.pay-form {
-			height: calc(100vh - 30px);
-		}
-		.footer-wrap-item.soc {
-			order: 2;
-		}
-		.footer-wrap-item .title {
-			
-			font-size: 22px;
-		}
-		.footer-wrap-item.min .title {
-			min-height: 53px;
-		}
-		.footer-wrap-right .footer-wrap-item {
-			width: 50%;
-		}
-		.footer-wrap-right .phone {
-			display: block;
-			margin-bottom: 10px;
-			
-		}
-		.footer-wrap-item ul li a {
-			margin-bottom: 10px;
-			font-size: 12px;
-		}
-	}
-</style>
-<div id="accelerator-delete"></div>
-<script>
-  const del = document.getElementById('accelerator-delete');
-	if (del.nextElementSibling.href != '') {
-		del.nextElementSibling.remove();
-	}
-</script>
 <div class="hidden-form-pay" style="display: none">
 	<?php echo do_shortcode('[contact-form-7 id="7d56bfe" title="Пожертвование"]'); ?>
 </div>
 <script>
+ 
 	
-		
-		/*window.addEventListener('resize', function(event){location.reload();}*/
 </script>
 
 </body>

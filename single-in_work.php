@@ -61,9 +61,9 @@
 							<script src="https://yastatic.net/share2/share.js"></script>
 							<div class="ya-share2" data-curtain 					
 							data-shape="round" 	
-							data-url="[(site_url)][~[+id+]~]"
-							data-title="[+pagetitle+]"
-							data-image="[(site_url)][+tv.image+]"								
+							data-url="<?php the_permalink(); ?>"
+							data-title="<?php the_title(); ?>"
+							data-image="<?php the_post_thumbnail_url(); ?>"								
 							data-limit="0" 					
 							data-more-button-type="short" data-services="telegram,twitter,viber,whatsapp"></div>						
 							

@@ -7,7 +7,7 @@
   flex-direction: column
   align-items: center
   box-shadow: 0px 4px 45px rgba(0, 0, 0, 0.1)
-  max-width: 1000px
+  max-width: 740px
   width: 100%
   max-height: 100%
   img
@@ -359,7 +359,6 @@
       &::after
         background-image: url(../img/icons/check.svg)
 
-
 @media (max-width: 992px)
   .pay-form
     width: 100%
@@ -429,3 +428,237 @@
         margin-bottom: 10px
   #thx b, .thx b, #thx-pay b, #thx-vol b
     font-size: 20px  
+  .thx
+    max-width: calc(100% - 30px)!important
+
+
+
+.pay-form small label
+  a
+    font-size: 20px
+    color: #c2c2c2
+
+  &:hover
+    color: #c2c2c2
+
+.phone.contacts-wrap-item div
+  font-size: 40px
+  font-weight: 400
+  color: #1f3040
+  display: block
+  margin: auto
+  text-align: center
+
+@media (max-width: 992px)
+  .contacts .adress
+    position: relative
+
+    .icon
+      position: absolute
+      left: -40px
+      top: 0px
+
+    p
+      text-align: center
+
+@media (max-width: 767px)
+  .phone.contacts-wrap-item div
+    font-size: 22px
+
+  .contacts .adress .icon
+    position: absolute
+    left: -10px
+    top: -5px
+
+    svg
+      height: 24px
+      width: 24px
+
+@media (max-width: 578px)
+  .contacts .adress
+    .icon
+      position: absolute
+      left: -7px
+      top: -0px
+
+      svg
+        height: 24px
+        width: 24px
+
+    p
+      padding-left: 10px
+
+@media (max-width: 1420px)
+  .footer-wrap .req
+    max-width: 310px
+
+  .pay-form
+    height: 670px
+    width: 100%
+    width: 970px
+    max-width: calc(100vw - 30px)
+    max-height: calc(100vh - 30px)
+
+    .wrap
+      position: relative
+
+    .close
+      top: 28px
+      right: 20px
+
+    .go-pay
+      margin-bottom: 20px
+      height: 60px
+      font-size: 20px
+
+    small label
+      font-size: 16px
+      padding-left: 30px
+
+      &:after
+        height: 20px
+        width: 20px
+
+    .input-wrapper
+      margin-bottom: 30px
+
+    .input input
+      height: 45px
+      font-size: 18px
+
+      &:placeholder
+        font-size: 18px
+
+    .row
+      margin-bottom: 20px
+
+    .item
+      width: calc(25% - 10px)
+      font-size: 16px
+      height: 40px
+      margin-right: 10px
+
+    .pay-form-toggle
+      margin-bottom: 20px
+
+      .button
+        font-size: 18px
+        height: 40px
+
+    b
+      font-size: 24px
+      margin-bottom: 20px
+
+@media (min-width: 992px) and (max-width: 1420px)
+  .footer-wrap-right
+    width: calc(100% - 450px)
+
+@media (max-width: 992px)
+  .pay-form small label a
+    font-size: 16px
+
+  .offer::after
+    width: 300px
+    height: 700px
+
+.pay-form
+  .row
+    justify-content: flex-start
+
+  .item
+    width: calc(25% - 20px)
+    margin-right: 20px
+    margin-bottom: 20px
+
+@media (max-width: 767px)
+  .pay-form .item
+    width: calc(50% - 10px)
+    margin-bottom: 10px
+    margin-right: 10px
+
+@media (max-width: 578px)
+  .footer-wrap-item .subs
+    display: block !important
+    font-size: 22px
+    font-weight: 500
+    margin-top: 40px
+
+  .pay-form
+    height: calc(100vh - 30px)
+
+  .footer-wrap-item
+    &.soc
+      order: 2
+
+    .title
+      font-size: 22px
+
+    &.min .title
+      min-height: 53px
+
+  .footer-wrap-right
+    .footer-wrap-item
+      width: 50%
+
+    .phone
+      display: block
+      margin-bottom: 10px
+
+  .footer-wrap-item ul li a
+    margin-bottom: 10px
+    font-size: 12px
+
+.grecaptcha-badge
+  display: none
+  visibility: hidden
+  opacity: 0
+
+
+
+
+.anon-form 
+  background-size: 300px
+  .page-form
+    margin-bottom: 0
+    padding: 40px
+    .pay-form .item span
+      text-align: center
+    .popup.pay-form
+      position: static
+      overflow: hidden
+      height: auto
+      width: 100%
+      transform: none
+      background: transparent
+      max-height: 100%
+      max-width: 100%!important
+      padding: 0
+      .go-pay:hover
+        background-color: #fff
+        color: #000
+      small
+        a
+          color: #000
+      .wrap
+        background: transparent
+        padding: 0
+        height: auto
+        overflow: hidden
+        max-height: 100%
+
+@media (max-width: 578px)
+  .anon-form .page-form
+    padding: 30px 20px
+  .pay-form small label
+    font-size: 14px
+    a
+      font-size: 14px
+
+
+
+
+
+
+
+
+  

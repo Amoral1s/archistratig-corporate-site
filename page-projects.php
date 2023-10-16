@@ -87,7 +87,7 @@ get_header(); ?>
 	</div>
 	<div class="container">
 		<div class="page-project-toggles">
-			<div>Проекты в работе</div>
+			<div>Храмы в работе</div>
 			<a href="<?php the_permalink(151) ?>">Завершенные проекты</a>
 		</div>
 		<div class="page-projects-wrapper">
@@ -100,7 +100,7 @@ get_header(); ?>
         <div class="projects-wrap-item">
           <img src="<?php the_post_thumbnail_url('large') ?>" alt="thumb">
           <div class="projects-wrap-item-title">
-            <h3><?php the_title(); ?></h3>
+            <a href="<?php the_permalink(); ?>"><h3><?php the_title() ?></h3></a>
             <span><?php the_field('mestopolozhenie_hrama') ?>, </span>
             <span><?php the_field('osnovanie_hrama') ?></span>
           </div>
