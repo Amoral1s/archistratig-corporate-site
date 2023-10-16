@@ -5803,3 +5803,119 @@
     width: calc(100% - 450px);
   }
 }
+
+@media (min-width: 992px) and (max-width: 1945px) {
+  .popup.rem-pay {
+    max-width: 740px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .popup.rem-pay .row {
+    margin-bottom: 10px;
+  }
+
+  .popup.rem-pay .item {
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .popup.rem-pay .pay-form-toggle {
+    margin-bottom: 20px;
+  }
+
+  .popup.rem-pay .pay-form-toggle .button {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .popup.rem-pay b {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .popup.rem-pay .input input {
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .popup.rem-pay .input-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .popup.rem-pay .go-pay {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .popup.rem-pay small {
+    font-size: 16px;
+  }
+
+  .popup.rem-pay small label {
+    font-size: 16px;
+  }
+
+  .popup.rem-pay small label a {
+    font-size: 16px;
+  }
+
+  .popup.rem-pay {
+    max-width: 740px;
+    height: -webkit-max-content;
+    height: -moz-max-content;
+    height: max-content;
+  }
+
+  .popup.rem-pay .row {
+    margin-bottom: 10px;
+  }
+
+  .popup.rem-pay .item {
+    margin-bottom: 10px;
+    height: 30px;
+    font-size: 14px;
+  }
+
+  .popup.rem-pay .pay-form-toggle {
+    margin-bottom: 20px;
+  }
+
+  .popup.rem-pay .pay-form-toggle .button {
+    height: 40px;
+    font-size: 16px;
+  }
+
+  .popup.rem-pay b {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+
+  .popup.rem-pay .input input {
+    height: 50px;
+    font-size: 18px;
+  }
+
+  .popup.rem-pay .input-wrapper {
+    margin-bottom: 30px;
+  }
+
+  .popup.rem-pay .go-pay {
+    height: 60px;
+    font-size: 20px;
+  }
+
+  .popup.rem-pay small {
+    font-size: 16px;
+  }
+
+  .popup.rem-pay small label {
+    font-size: 16px;
+  }
+
+  .popup.rem-pay small label a {
+    font-size: 16px;
+  }
+}

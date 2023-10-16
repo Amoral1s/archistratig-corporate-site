@@ -1,5 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
+  const anonPage = document.querySelector('.anon-form');
+
+  if (anonPage) {
+    const popForm = document.querySelector('.rem-pay');
+    const btns = document.querySelectorAll('.button.donate');
+    btns.forEach(e => e.classList.add('disabled'));
+    popForm.remove();
+  }
+
   const summVals = document.querySelectorAll('.pay-form .item');
   const summValsValue = document.querySelectorAll('.pay-form .item span');
   const summInput = document.querySelector('.summ-input');

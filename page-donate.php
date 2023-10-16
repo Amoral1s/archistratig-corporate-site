@@ -51,7 +51,7 @@ get_header(); ?>
 					<div class="input-wrapper input" style="display: none">
 						<input autocomplete="on" value="Аноним" class="pay-name" type="text" name="name" placeholder="Имя и фамилия">
 						<input autocomplete="on" value="Аноним" class="pay-email" name="email" type="email" placeholder="E-mail">
-						<input autocomplete="on" value="+" name="phone" class="pay-phone" type="tel" placeholder="Телефон">
+						<input autocomplete="on" value="Аноним" name="phone" class="pay-phone" type="tel" placeholder="Телефон">
 					</div>
 					<div class="button go-pay">
 						Пожертвовать
