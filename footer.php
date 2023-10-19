@@ -103,7 +103,7 @@
   <iframe width="860" height="515" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 </div>
 
-<div class="popup" id="thx">
+<div class="popup thx" id="thx">
   <div class="close"></div>
   <img src="<?php echo get_template_directory_uri(); ?>/img/offer.png" alt="thx">
   <b>Ваша заявка принята!</b>

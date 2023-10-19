@@ -33,15 +33,16 @@ jQuery(document).ready(function ($) {
     //alert('GOOD');
     jQuery('#thx').fadeIn(200);
 		$('.popup').addClass('popup-thx');
-		$('#thx').removeClass('popup-thx');
+		$('.thx').removeClass('popup-thx');
     //Скрытие поп окна автоматически, через 5,5 секнд
     jQuery('.overlay').fadeIn(300);
 
     setTimeout(function(){
       jQuery('.overlay').fadeOut(300);
       jQuery('.popup').fadeOut(300);
-      jQuery('#thx').fadeOut(200);
-    },2500);   //3500 = 3,5 секунды
+		  $('.popup').removeClass('popup-thx');
+      jQuery('.thx').fadeOut(200);
+    },2111500);   //3500 = 3,5 секунды
     
     /* setTimeout(function(){jQuery('.popup').fadeOut(300);},2700); 
     setTimeout(function(){jQuery('#calc').fadeOut(300);},2700);  */

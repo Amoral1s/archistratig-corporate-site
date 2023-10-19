@@ -74,12 +74,12 @@ document.addEventListener('DOMContentLoaded', () => {
             jQuery('#thx-pay').fadeIn(200);
             $('.popup').addClass('popup-thx');
             $('#thx-pay').removeClass('popup-thx');
-            //Скрытие поп окна автоматически, через 5,5 секнд
             jQuery('.overlay').fadeIn(300);
         
             setTimeout(function(){
               jQuery('.overlay').fadeOut(300);
               jQuery('.popup').fadeOut(300);
+              $('.popup').removeClass('popup-thx');
               jQuery('#thx-pay').fadeOut(200);
             },2500);   //3500 = 3,5 секунды
           },
@@ -158,16 +158,16 @@ document.addEventListener('DOMContentLoaded', () => {
       },
       {
           onSuccess: function (options) { // success
-            jQuery('#thx').fadeIn(200);
+            jQuery('#thx-pay').fadeIn(200);
             $('.popup').addClass('popup-thx');
-            $('#thx').removeClass('popup-thx');
-            //Скрытие поп окна автоматически, через 5,5 секнд
+            $('#thx-pay').removeClass('popup-thx');
             jQuery('.overlay').fadeIn(300);
         
             setTimeout(function(){
               jQuery('.overlay').fadeOut(300);
               jQuery('.popup').fadeOut(300);
-              jQuery('#thx').fadeOut(200);
+              $('.popup').removeClass('popup-thx');
+              jQuery('#thx-pay').fadeOut(200);
             },2500);   //3500 = 3,5 секунды
           },
           onFail: function (reason, options) { // fail
